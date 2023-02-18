@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE GAME</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .game_board{
+            height: 90vmin;
+            width: 90vmin;
+            background: linear-gradient(blue,violet);
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+        }
+        .score{
+            background: yellow;
+            padding: 10px 10px;
+            border-radius: 20px;
+        }
+        .snake{
+            background: #f4f803;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+        .head{
+            background: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/68113/snake-face-clipart-xl.png);
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            z-index: 22;
+        }
+        .food{
+            background: url(https://exalsci.netlify.app/snake/apple.ico);
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="score">SCORE:<span id="score">0</span></h1>
+        <div class="game_board"></div>
+    </div>
+    <script type="text/javascript"src="snake.js"></script>
+</body>
+</html>
